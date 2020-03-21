@@ -26,12 +26,10 @@ export default class JokeList extends Component {
       jokes.push({ id: uuid(), text: res.data.joke, votes: 0 });
     }
     this.setState({ jokes: jokes });
-
-    console.log(jokes);
+    window.localStorage.setItem("jokes", JSON.stringify(jokes));
   }
 
   handleVote(id, delta) {
-    console.log("hello");
     this.setState(st => ({
       jokes: st.jokes.map(j =>
         j.id === id ? { ...j, votes: j.votes + delta } : j
