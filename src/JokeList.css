@@ -43,3 +43,13 @@
   width: 70%;
   overflow: scroll;
 }
+
+.JokeList-spinner {
+  display: flex;
+  color: grey;
+  text-align: center;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 70px;
+}
